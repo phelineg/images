@@ -6,6 +6,11 @@ on:
 jobs:
   build-all:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
     strategy:
       matrix:
         service: [php-laravel-dev-environment]
