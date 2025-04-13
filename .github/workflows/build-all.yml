@@ -2,6 +2,7 @@ name: Build All
 
 on:
   push:
+    branches: [ main ]
 
 jobs:
   build-all:
@@ -32,4 +33,4 @@ jobs:
           context: ./${{ matrix.service }}
           file: ./${{ matrix.service }}/Dockerfile
           push: true
-          tags: ${{ matrix.service }}:latest
+          tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.service }}:${{ github.sha }}
