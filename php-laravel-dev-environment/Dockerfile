@@ -27,6 +27,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | b
 # Laravel installer
 RUN composer global require laravel/installer
 ENV PATH="/root/.composer/vendor/bin:${PATH}"
+ENV PATH="/root/.config/composer/vendor/bin:${PATH}"
 
 # Code Server
 RUN bash -c "source $HOME/.nvm/nvm.sh && nvm install 20"
