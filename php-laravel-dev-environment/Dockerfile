@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get install -y git curl 
 
 # PHP
-RUN apt-get install -y php php-cli php-common php-xml php-pdo php-mbstring php-mysql php-curl php-zip php-gd && \
+RUN apt-get install -y php php-cli php-common php-xml php-pdo php-mbstring php-mysql php-curl php-zip php-gd php-sqlite3 && \
     apt-get clean
 
 RUN php -version
